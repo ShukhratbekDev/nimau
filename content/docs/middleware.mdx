@@ -1,0 +1,43 @@
+---
+title: "Middleware"
+description: "Asosiy funksionalni kengaytirish uchun ilova qatlami yoki funktsiyasi."
+---
+
+**Middleware** (O'rta qatlam) — bu asosiy funksionalni kengaytirish uchun ilova qatlami yoki funktsiyasi bo'lib, u har bir so'rov va javob orasidagi vositachi bo'lib xizmat qiladi.
+
+## Asosiy Afzalliklar
+- **Funktsional kengaytirish**: Ilova funktsiyalarini kengaytirish imkoniyati.
+- **Kodning moddullik**: Kodni modularlashtirish va funksiyalarni alohida boshqarish imkoniyati.
+- **Moslashuvchanlik**: Har bir so'rov va javobni moslashtirish.
+
+## Foydalanish
+
+<Callout>
+**Middleware** — ilovalarda asosiy funksionalni kengaytirish uchun har bir so'rov va javob orasidagi vositachi sifatida xizmat qiladi.
+</Callout>
+
+### Misol
+
+Express.js da middleware yaratish misoli:
+
+```js
+const express = require('express');
+const app = express();
+
+// Middleware function to log request details
+const logRequestDetails = (req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+};
+
+// Use the middleware
+app.use(logRequestDetails);
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+```

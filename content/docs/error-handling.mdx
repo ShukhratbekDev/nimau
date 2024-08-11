@@ -1,0 +1,40 @@
+---
+title: "Error Handling"
+description: "Ilovalarda xatolarni boshqarish va ularni to'g'ri ko'rsatish usullari."
+---
+
+**Error Handling** (Xatolarni boshqarish) — bu ilovalarda xatolarni boshqarish va ularni to'g'ri ko'rsatish usullarini anglatadi.
+
+## Asosiy Afzalliklar
+- **Barqarorlik**: Xatolarni to'g'ri boshqarish ilovaning barqarorligini ta'minlaydi.
+- **Foydalanuvchi tajribasi**: Xatolar to'g'ri ko'rsatilishi foydalanuvchi tajribasini yaxshilaydi.
+- **Diagnostic**: Xatolarni aniqlash va ularni bartaraf etish imkonini beradi.
+
+## Foydalanish
+
+<Callout>
+**Error Handling** — ilovalarda xatolarni boshqarish va ularni to'g'ri ko'rsatish uchun muhim usullarni taqdim etadi.
+</Callout>
+
+### Misol
+
+Express.js da error handling amalga oshirish misoli:
+
+```js
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  throw new Error('Something went wrong!');
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+```

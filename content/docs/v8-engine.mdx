@@ -1,0 +1,49 @@
+---
+title: "V8 Engine"
+description: "Node.js tomonida ishlatiladigan Google tomonidan ishlab chiqilgan JavaScript va WebAssembly ijrochi dvigateli.."
+---
+
+**V8 Engine** (V8 Dvigatel) — bu Node.js tomonida ishlatiladigan Google tomonidan ishlab chiqilgan JavaScript va WebAssembly ijrochi dvigateli bo'lib, yuqori tezlikda kodni ishga tushirishga imkon beradi.
+
+## Asosiy Afzalliklar
+- **Yuqori samaradorlik**: Kodning tezkor interpretatsiyasi va kompilyatsiyasi.
+- **Kuchli optimallashtirish**: Tez va samarali ishlash uchun kuchli optimallashtirish texnikalari.
+- **Keng qo'llab-quvvatlash**: Zamonaviy JavaScript va WebAssembly-larni qo'llab-quvvatlash.
+
+## Foydalanish
+
+<Callout>
+  **V8 Engine** — bu Node.js-ning asosi bo'lib, yuqori tezlikda JavaScript va WebAssembly kodini ishga tushirishga imkon beradi.
+</Callout>
+
+### Misol
+
+V8 Engine yordamida Node.js ilovasini ishga tushirish misoli:
+
+```jsx
+// app.js
+console.log('Hello, World!');
+
+// V8 Engine yordamida ushbu kodni ishga tushirish
+node app.js
+```
+V8 Engine node app.js komandasini ishga tushiradi va app.js faylidagi JavaScript kodini tez va samarali tarzda interpretatsiya qiladi.
+
+#### V8 Engine arxitekturasi
+1. JavaScript Parser:
+JavaScript kodini tahlil qiladi va syntaktik daraxt (AST) ga aylantiradi.
+2. Interpreter (Ignition):
+AST ni bytecode ga kompilyatsiya qiladi.
+3. Optimizing Compiler (TurboFan):
+Tez-tez ishlatiladigan bytecode ni o'qiydi va optimallashtirilgan mashina kodiga kompilyatsiya qiladi.
+
+### V8 Engine-ni yangilash
+Node.js V8 Engine-ni doimiy ravishda yangilab boradi, bu esa JavaScript-ning yangi xususiyatlari va optimallashtirish texnikalaridan foydalanish imkonini beradi.
+
+```bash
+# Node.js yangilash
+npm cache clean -f
+npm install -g n
+n stable
+```
+Node.js-ni yangilash orqali siz V8 Engine-ning yangi versiyalaridan foydalanishingiz mumkin.
