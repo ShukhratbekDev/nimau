@@ -1,0 +1,37 @@
+---
+title: 'Microservices'
+description: "Mustaqil ravishda ishlab chiqilishi, joylashtirilishi va boshqarilishi mumkin bo'lgan individual biznes funksional qismlar."
+---
+
+**Microservices** (Mikroxizmatlar) — mustaqil ravishda ishlab chiqilishi, joylashtirilishi va boshqarilishi mumkin bo'lgan individual biznes funksional qismlar.
+
+## Asosiy Afzalliklar
+
+- **Mustaqillik:** Har bir xizmat mustaqil ravishda ishlab chiqilishi va boshqarilishi mumkin.
+- **Moslashuvchanlik:** Tezkor o'zgarishlar va yangilashlar amalga oshirish imkoniyati.
+- **Kengaytiruvchanlik:** Kengaytirish va mustaqil ravishda xizmatlarni qo'shish imkoniyati.
+
+## Foydalanish
+
+<Callout>
+  **Microservices** yondashuvi dasturiy ta'minotning individual qismlarini mustaqil ravishda ishlab chiqish,
+  joylashtirish va boshqarish imkoniyatini beradi, bu dasturiy ta'minotning moslashuvchanligi va kengaytiruvchanligini
+  oshiradi.
+</Callout>
+
+### Misol
+
+Bir kompaniya o'z tizimidagi turli xizmatlarni mustaqil rivojlantirish uchun **microservices** yondashuvidan foydalanadi. Har bir xizmat o'zining alohida kod bazasiga ega bo'lib, ular bir-biridan mustaqil ravishda yangilanadi va joylashtiriladi.
+
+```jsx
+// Psevdo-kod misol
+const userService = new Microservice('UserService');
+const paymentService = new Microservice('PaymentService');
+
+userService.deploy();
+paymentService.deploy();
+
+// Har bir microservice mustaqil ravishda ishlaydi va boshqariladi
+userService.manage();
+paymentService.manage();
+```

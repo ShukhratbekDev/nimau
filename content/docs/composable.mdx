@@ -1,0 +1,32 @@
+---
+title: 'Composable'
+description: 'Modulli, birga ishlovchi va almashtiriladigan dasturiy komponentlardan foydalangan holda moslashuvchan yechimlar yaratish yondashuvi.'
+---
+
+**Composable** (Modulli) — Gartner ta'rifiga ko'ra, bu tashkilotlar modulli, birga ishlovchi va almashtiriladigan dasturiy komponentlardan foydalangan holda moslashuvchan va moslashadigan yechimlar yaratadigan yondashuvdir. Bu biznes imkoniyatlarini dinamik ravishda yig'ish va qayta yig'ish imkonini berib, o'zgaruvchan biznes ehtiyojlariga moslashuvchanlik va javob berishni ta'minlaydi.
+
+## Asosiy Afzalliklar
+
+- **Modullik:** Almashtiriladigan va birga ishlovchi komponentlarni ishlatish.
+- **Dinamik:** Biznes imkoniyatlarini tez yig'ish va qayta yig'ish imkoniyati.
+- **Moslashuvchanlik:** O'zgaruvchan biznes ehtiyojlariga moslashuvchanlik va javob berish.
+
+## Foydalanish
+
+<Callout>
+  **Composable** yondashuvi tashkilotlarga modulli va moslashuvchan dasturiy komponentlarni ishlatib, tez va samarali
+  moslashish imkoniyatini yaratadi.
+</Callout>
+
+### Misol
+
+Bir kompaniya o'z biznes imkoniyatlarini **composable** yondashuvi orqali dinamik ravishda yig'ib, o'zgaruvchan ehtiyojlariga moslashuvchan javob beradi.
+
+```js
+// Psevdo-kod misol
+const composablePlatform = ComposableProvider.initialize();
+const moduleA = composablePlatform.createModule('ModuleA');
+const moduleB = composablePlatform.createModule('ModuleB');
+const solution = composablePlatform.assembleSolution([moduleA, moduleB]);
+solution.adaptToChange(newBusinessNeeds);
+```

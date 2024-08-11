@@ -1,0 +1,39 @@
+---
+title: 'Eventing'
+description: 'Voqealarni uzatish orqali tizimda amallarni yoki jarayonlarni tetiklash dasturlash paradigmasi.'
+---
+
+**Eventing** (Voqea yuborish) — bu tizimda amallarni yoki jarayonlarni tetiklash uchun voqealarni uzatadigan dasturlash paradigmasi bo'lib, metod yoki xizmatni bevosita chaqirish o'rniga voqealarni taniqli qiladi. Bu voqeaviy arxitekturalarining asosidir.
+
+## Asosiy Afzalliklar
+
+- **Gevoniylik:** Komponentlar o'rtasidagi kuchli bog'liqlikni kamaytiradi.
+- **Moslashuvchanlik:** Tizimning yuqori moslashuvchanligi va kengayishi.
+- **Reaktivlik:** Voqealarga tezkor javob berish.
+
+## Foydalanish
+
+<Callout>
+  **Eventing** dasturlash paradigmasi voqealarni uzatish orqali tizimda amallarni yoki jarayonlarni tetiklash uchun
+  ishlatiladi va event-driven arxitekturalarining asosini tashkil etadi.
+</Callout>
+
+### Misol
+
+Bir tizimda voqealar boshqa komponentlar tomonidan qabul qilinadi va ular orqali amallar bajariladi. Masalan, foydalanuvchi tugmachasini bosganda, tizimdagi boshqa komponentlar voqeani qabul qilib, tegishli amallarni bajaradi.
+
+```js
+// Psevdo-kod misol
+const eventBus = new EventBus();
+
+const buttonClickHandler = () => {
+  eventBus.emit('buttonClicked');
+};
+
+eventBus.on('buttonClicked', () => {
+  console.log('Button was clicked, performing action...');
+});
+
+// Tugmachaga bosish voqeasi
+buttonClickHandler();
+```

@@ -1,0 +1,32 @@
+---
+title: 'FaaS (Function as a Service)'
+description: 'Voqealarga javoban kodni bajarish imkonini beruvchi va serverlarni boshqarishni talab qilmaydigan xizmat.'
+---
+
+**FaaS** (Function as a Service) — bu voqealarga javoban kodni bajarish imkonini beruvchi va serverlarni boshqarishni talab qilmaydigan xizmatdir.
+
+## Asosiy Afzalliklar
+
+- **Serverni boshqarish talab qilinmaydi:** Serverlarni boshqarish va texnik xizmatni talab qilmaydi.
+- **Moslashuvchan o'lchov:** Talabga ko'ra avtomatik kengaytirish.
+- **Iqtisodiy ustunlik:** Faqat bajarilgan funksiyalar uchun to'lov.
+
+## Foydalanish
+
+<Callout>
+  **FaaS** orqali dasturchilar voqealarga javoban kodni bajarishlari mumkin bo'lib, bu serverlarni boshqarish
+  majburiyatidan ozod etadi.
+</Callout>
+
+### Misol
+
+Kompaniya yangi funksiyalarni voqealarga javoban bajarish uchun FaaS xizmatidan foydalanadi.
+
+```js
+// Psevdo-kod misol
+const faasService = FaaSProvider.initialize();
+const function = faasService.createFunction();
+function.onEvent('fileUpload', () => {
+  processNewFile();
+});
+```

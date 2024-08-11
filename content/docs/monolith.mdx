@@ -1,0 +1,42 @@
+---
+title: 'Monolith'
+description: "Butun dasturiy ta'minot tizimi bitta, o'zaro bog'langan tizim sifatida qurilgan arxitektura."
+---
+
+**Monolith** (Monolit) — modulli, kompozit, microservice va MACH arxitekturalarining qarama-qarshisi bo'lib, barcha ilova bitta, o'zaro bog'langan tizim sifatida qurilgan dasturiy arxitekturadir.
+
+## Asosiy Afzalliklar
+
+- **Oddiylik:** Barcha komponentlar bitta kod bazasida joylashgan.
+- **Birlashgan boshqaruv:** Barcha tizim boshqaruvini bir joyda amalga oshirish.
+- **O'rganish va tushunish oson:** Yagona tizim bilan tanishish osonroq.
+
+## Kamchiliklar
+
+- **Moslashuvchanlik yetishmasligi:** Qismlarni mustaqil o'zgartirish yoki ishlab chiqish qiyin.
+- **Kengaytiruvchanlik cheklangan:** Tizimning kengayishi murakkab va qimmat.
+- **Texnik xizmat ko'rsatish qiyinligi:** Tizimning har qanday qismi uchun o'zgartirish kiritish ko'plab boshqa qismlarga ta'sir qilishi mumkin.
+
+## Foydalanish
+
+<Callout>
+  **Monolith**— barcha ilova bitta, o'zaro bog'langan tizim sifatida qurilgan dasturiy arxitektura. Bu modular,
+  composable va MACH arxitekturalarining qarama-qarshisi sifatida tushunilishi mumkin.
+</Callout>
+
+### Misol
+
+Bir kompaniya o'z dasturiy ta'minotini yagonalashgan monolit arxitektura sifatida ishlab chiqqan. Barcha modullar va funktsiyalar bitta tizimda birlashib keladi.
+
+```jsx
+// Psevdo-kod misol
+const monolithicApp = new MonolithicApplication();
+
+monolithicApp.addFeature('UserManagement');
+monolithicApp.addFeature('PaymentProcessing');
+monolithicApp.addFeature('Reporting');
+
+// Barcha modullar va funktsiyalar yagonalashgan tizimda birlashadi
+monolithicApp.deploy();
+monolithicApp.manage();
+```

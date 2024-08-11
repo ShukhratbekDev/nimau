@@ -1,0 +1,30 @@
+---
+title: 'BaaS (Backend as a Service)'
+description: "Bulutda backend funksiyalari, masalan, ma'lumotlar bazalari, server kodlari, autentifikatsiya va boshqalarni taqdim etadigan xizmat."
+---
+
+**BaaS** (Backend as a Service) — bu bulutda backend funksiyalari, masalan, ma'lumotlar bazalari, server kodlari, autentifikatsiya va boshqalarni taqdim etadigan xizmat.
+
+## Asosiy Afzalliklar
+
+- **Tez rivojlanish:** Tayyor backend komponentlari yordamida tez dasturlash.
+- **Liabiliti yo‘q:** Serverni boshqarish va texnik xizmat ko'rsatish majburiyatlarini kamaytirish.
+- **Integratsiya:** Ko'plab frontend platformalari bilan integratsiya qilish imkoniyati.
+
+## Foydalanish
+
+<Callout>
+  **BaaS** orqali dasturchilar backend xizmatlarini yaratish va boshqarish bilan band bo'lmay, o'z e'tiborlarini
+  frontend va foydalanuvchi tajribasiga qaratishlari mumkin.
+</Callout>
+
+### Misol
+
+Bir dasturchi yangi ilova yaratishda BaaS xizmatidan foydalanib, autentifikatsiya va ma'lumotlar bazasi boshqaruvini ta'minlaydi.
+
+```js
+// Psevdo-kod misol
+const baasService = BaaSProvider.initialize();
+const authModule = baasService.initializeAuthModule();
+const database = baasService.connectToDatabase();
+```

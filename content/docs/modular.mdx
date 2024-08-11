@@ -1,0 +1,40 @@
+---
+title: 'Modular'
+description: "Alohida komponentlar yoki modullarni qo'shish, olib tashlash yoki almashtirish mumkin bo'lgan dizayn yoki arxitektura."
+---
+
+**Modular** (Modulli) — bu dizayn yoki arxitektura bo'lib, alohida komponentlar yoki modullarni qo'shish, olib tashlash yoki almashtirish mumkin bo'lib, tizimning qolgan qismiga ta'sir qilmaydi.
+
+## Asosiy Afzalliklar
+
+- **Moslashuvchanlik:** Komponentlarni oson almashtirish va yangilash imkoniyati.
+- **Kengaytiruvchanlik:** Tizimni kengaytirish va yangi funksionallik qo'shish imkoniyati.
+- **Boshqarish:** Tizimni boshqarish va texnik xizmat ko'rsatishni osonlashtirish.
+
+## Foydalanish
+
+<Callout>
+  **Modular** yondashuvi tizimning alohida komponentlari yoki modullarini mustaqil ravishda boshqarish, almashtirish va
+  yangilash imkoniyatini beradi, bu tizimning moslashuvchanligi va kengaytiruvchanligini oshiradi.
+</Callout>
+
+### Misol
+
+Bir kompaniya o'z dasturini **modular** yondashuv yordamida yaratadi. Bu ularga turli modullarni qo'shish, olib tashlash yoki almashtirish imkonini beradi, bu esa tizimning boshqa qismlariga ta'sir qilmaydi.
+
+```jsx
+// Psevdo-kod misol
+const moduleA = new Module('ModuleA');
+const moduleB = new Module('ModuleB');
+
+const system = new ModularSystem();
+system.addModule(moduleA);
+system.addModule(moduleB);
+
+// Module B ni olib tashlash
+system.removeModule('ModuleB');
+
+// Yangi modul qo'shish
+const moduleC = new Module('ModuleC');
+system.addModule(moduleC);
+```

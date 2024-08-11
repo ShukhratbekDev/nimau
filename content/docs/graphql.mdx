@@ -1,0 +1,34 @@
+---
+title: 'GraphQL'
+description: "API-lar uchun so'rov tili va tizim bo'lib, mijozlarga kerakli ma'lumotlarni aniqlashtirish imkonini beradi, ortiqcha ma'lumotlarni so'rashni kamaytiradi va API-dan samarali foydalanishni ta'minlaydi."
+---
+
+**GraphQL** — API-lar uchun so'rov tili va tizim bo'lib, mijozlarga kerakli ma'lumotlarni aniqlashtirish imkonini beradi, ortiqcha ma'lumotlarni so'rashni kamaytiradi va API-dan samarali foydalanishni ta'minlaydi.
+
+## Asosiy Afzalliklar
+
+- **Aniq so'rovlar:** Mijozlar faqat kerakli ma'lumotlarni so'raydi.
+- **Kamaytirilgan ortiqcha yuk:** Ortiqcha ma'lumotlarni so'rashni kamaytiradi.
+- **Moslashuvchanlik:** API-lardan samarali foydalanishni ta'minlaydi.
+
+## Foydalanish
+
+<Callout>
+  **GraphQL** tizimi mijozlarga kerakli ma'lumotlarni aniq so'rash imkonini berib, API-dan samarali foydalanishni
+  ta'minlaydi va ortiqcha yukni kamaytiradi.
+</Callout>
+
+### Misol
+
+Bir dasturchi GraphQL yordamida API-dan faqat kerakli ma'lumotlarni so'raydi, bu esa tarmoq resurslaridan samarali foydalanishga yordam beradi.
+
+```graphql
+# So'rov namunasi
+query {
+  user(id: "1") {
+    id
+    name
+    email
+  }
+}
+```

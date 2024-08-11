@@ -1,0 +1,50 @@
+{
+  "name": "@shukhratbek/nimau",
+  "version": "0.0.0",
+  "private": true,
+  "author": {
+    "email": "shukhratbek.dev@gmail.com",
+    "name": "Shukhratbek"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "check-types": "tsc --noEmit",
+    "eslint": "eslint . --ext ts,tsx --cache",
+    "lint": "npm-run-all check-types eslint prettier",
+    "prepare": "husky install",
+    "prettier": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  },
+  "dependencies": {
+    "fumadocs-core": "13.1.0",
+    "fumadocs-mdx": "9.0.0",
+    "fumadocs-ui": "13.1.0",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-type-animation": "^3.2.0"
+  },
+  "devDependencies": {
+    "@shukhratbek/eslint-config": "^1.0.4",
+    "@types/jest": "^29.5.12",
+    "@types/lodash": "^4.17.7",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "22.2.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "husky": "^9.1.4",
+    "jest": "^29.7.0",
+    "npm-run-all2": "^6.2.2",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.4"
+  }
+}

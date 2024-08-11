@@ -1,0 +1,38 @@
+---
+title: 'Swapability'
+description: "Bir komponent yoki xizmatni boshqa bir komponent yoki xizmat bilan oson almashtirish imkoniyati, dasturiy tizimning umumiy funksionaliga ta'sir qilmasdan."
+---
+
+**Swapability** (Almashtiruvchanlik) — bir komponent yoki xizmatni boshqa bir komponent yoki xizmat bilan oson almashtirish imkoniyati, dasturiy tizimning umumiy funksionaliga ta'sir qilmasdan.
+
+## Asosiy Afzalliklar
+
+- **Moslashuvchanlik:** Komponentlar yoki xizmatlarni tez va oson almashtirish imkoniyati.
+- **Uzluksizlik:** Umumiy funksionalni saqlab qolgan holda tizimni yangilash va yoritish imkoniyati.
+- **Kengaytiruvchanlik:** Tizimga yangi komponentlar yoki xizmatlarni qo'shish va almashtirish imkoniyati.
+
+## Foydalanish
+
+<Callout>
+  **Swapability** yondashuvi dasturiy tizimning umumiy funksionalini saqlab qolgan holda, har qanday komponent yoki
+  xizmatni tez va oson almashtirish imkonini beradi.
+</Callout>
+
+### Misol
+
+Bir kompaniya o'z tizimida swapability yondashuvini qo'llaydi. Bu ularga bir komponentni boshqa biriga almashtirish imkonini beradi, bu o'z navbatida umumiy funksionalni saqlab qoladi.
+
+```jsx
+// Psevdo-kod misol
+const currentComponent = new Component('CurrentComponent');
+const newComponent = new Component('NewComponent');
+
+const system = new System();
+system.addComponent(currentComponent);
+
+// Komponentni almashtirish
+system.replaceComponent('CurrentComponent', newComponent);
+
+// Tizim umumiy funksionalini saqlab qoladi
+system.run();
+```

@@ -1,0 +1,36 @@
+---
+title: 'Multi-tenant'
+description: "Bitta dasturiy ta'minot instantsiyasi bir serverda ishlaydi va bir nechta mijozlarga (yoki ijara oluvchilarga) xavfsiz va alohida xizmat ko'rsatadi."
+---
+
+**Multi-tenant** (Ko'p ijarachili) — bitta dasturiy ta'minot instantsiyasi bir serverda ishlaydi va bir nechta mijozlarga (yoki ijara oluvchilarga) xavfsiz va alohida xizmat ko'rsatadi.
+
+## Asosiy Afzalliklar
+
+- **Resurslarni tejash:** Bir nechta mijozlar uchun bitta instantsiya ishlaydi.
+- **Iqtisodiy samaradorlik:** Hammasi uchun umumiy resurslarni ishlatish orqali xarajatlarni kamaytiradi.
+- **Oson boshqaruv:** Barcha mijozlar uchun bitta platformani boshqarish osonroq.
+
+## Foydalanish
+
+<Callout>
+  **Multi-tenant** arxitektura bitta serverda bitta dasturiy ta'minot instantsiyasini ishlatadi, bu esa bir nechta
+  mijozlarga xavfsiz va alohida xizmat ko'rsatishni ta'minlaydi.
+</Callout>
+
+### Misol
+
+Bir SaaS kompaniya o'z xizmatini multi-tenant arxitektura yordamida taqdim etadi, bu esa ularning barcha mijozlariga bir xil platforma orqali xavfsiz xizmat ko'rsatish imkonini beradi.
+
+```jsx
+// Psevdo-kod misol
+const server = new Server();
+
+const tenant1 = server.createTenant('Tenant1');
+const tenant2 = server.createTenant('Tenant2');
+
+// Bitta dasturiy ta'minot instantsiyasi bir nechta mijozga xizmat ko'rsatadi
+server.run();
+tenant1.useService();
+tenant2.useService();
+```

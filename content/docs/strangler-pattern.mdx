@@ -1,0 +1,45 @@
+---
+title: 'Strangler Pattern'
+description: "Eskirgan dasturlarni yaxshilash uchun tizimning qismlarini asta-sekin yangi, zamonaviy komponentlar va xizmatlar bilan almashtirishga mo'ljallangan arxitektura patterni."
+---
+
+**Strangler Pattern** (Bo'g'uvchi daraxt naqshi) — eskirgan dasturlarni zamonaviylashtirish uchun arxitektura pattern, bu orqali tizimning qismlari asta-sekin yangi, zamonaviy komponentlar va xizmatlar bilan almashtiriladi.
+
+## Asosiy Afzalliklar
+
+- **Gradual modernization:** Tizimni asta-sekin modernizatsiya qilish imkoniyati.
+- **Reduced risk:** Tizim qismlarini bosqichma-bosqich almashtirish xavfini kamaytiradi.
+- **Smooth transition:** Yangi komponentlar bilan tizimni yetkazish va qabul qilishda silliq o'tish imkoniyati.
+
+## Alternativ Atamalar
+
+- **Strangler Fig Pattern:** Daraxtga o'xshash naqsh sifatida tanilgan.
+
+## Foydalanish
+
+<Callout>
+  **Strangler Pattern** — bu tizimning qismlarini yangi komponentlar bilan asta-sekin almashtirib, eskirgan dasturlarni
+  zamonaviylashtirish uchun ishlatiladigan arxitektura patterni.
+</Callout>
+
+### Misol
+
+Bir kompaniya o'z eski tizimini zamonaviylashtirayotganda bosqichma-bosqich yangi xizmatlar va komponentlar kiritib, Strangler Pattern yondashuvidan foydalanadi. Bunda eski tizimni to'liq almashtirmasdan, yangi komponentlarni qo'shish va eskirgan qismlarni olib tashlash amalga oshiriladi.
+
+```jsx
+// Psevdo-kod misol
+const legacySystem = new LegacySystem();
+
+const newService1 = new ModernService('Service1');
+const newService2 = new ModernService('Service2');
+
+// Eski tizimga yangi xizmatlarni qo'shish
+legacySystem.addService(newService1);
+legacySystem.addService(newService2);
+
+// Eski tizim qismlarini asta-sekin olib tashlash
+legacySystem.removePart('OldComponent1');
+newService1.integrate();
+legacySystem.removePart('OldComponent2');
+newService2.integrate();
+```

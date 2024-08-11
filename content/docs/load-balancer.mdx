@@ -1,0 +1,35 @@
+---
+title: 'Load Balancer'
+description: "Tarmoqdagi kiruvchi trafikni bir nechta server yoki resurslarga taqsimlaydigan qurilma yoki dasturiy ta'minot."
+---
+
+**Load Balancer** (Yuk taqsimlagichi) — tarmoqdagi kiruvchi trafikni bir nechta server yoki resurslarga taqsimlaydigan qurilma yoki dasturiy ta'minot. Bu har qanday serverning haddan tashqari yuklanishining oldini olishga yordam beradi va barcha kiruvchi so'rovlarni samarali ravishda boshqarishni ta'minlaydi.
+
+## Asosiy Afzalliklar
+
+- **Yukni taqsimlash:** Trafikni bir nechta serverlarga tarqatadi.
+- **Ishlash samaradorligi:** Har qanday serverning haddan tashqari yuklanmasligini ta'minlaydi.
+- **Barqarorlik:** Xizmatlarning uzluksiz ishlashini ta'minlaydi.
+
+## Foydalanish
+
+<Callout>
+  **Load Balancer** tizimlari tarmoqdagi kiruvchi trafikni bir nechta server yoki resurslarga taqsimlaydi va har qanday
+  serverning haddan tashqari yuklanmasligini ta'minlaydi.
+</Callout>
+
+### Misol
+
+Bir veb-sayt kiruvchi trafikni boshqarish uchun load balancer ishlatadi. Load balancer trafikni bir nechta serverlarga taqsimlaydi va har bir so'rov samarali ravishda boshqariladi.
+
+```js
+// Psevdo-kod misol
+const loadBalancer = new LoadBalancer();
+
+loadBalancer.addServer('server1');
+loadBalancer.addServer('server2');
+
+loadBalancer.handleRequest((request) => {
+  console.log('Handling request:', request);
+});
+```
