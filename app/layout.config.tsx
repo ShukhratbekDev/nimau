@@ -8,6 +8,7 @@ export const baseOptions: HomeLayoutProps = {
   nav: {
     title: 'Nima U',
   },
+  githubUrl: 'https://github.com/ShukhratbekDev/nimau',
 };
 
 // docs layout configuration
