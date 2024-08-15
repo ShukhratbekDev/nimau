@@ -53,8 +53,11 @@ export const blog = loader({
   source: createMDXSource(map, {
     schema: {
       frontmatter: defaultSchemas.frontmatter.extend({
-        author: z.string(),
-        date: z.string().date().or(z.date()).optional(),
+        authors: z.array(
+          z.object({ name: z.string(), avatar: z.string().optional(), telegram: z.string().optional() })
+        ),
+        createdAt: z.string().date().or(z.date()).optional(),
+        updatedAt: z.string().date().or(z.date()).optional(),
       }),
     },
   }),

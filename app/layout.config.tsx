@@ -6,6 +6,7 @@ import { NimaUIcon, NavChildren } from '@/app/layout.client';
 
 import { docs } from '@/app/source';
 import { modes } from '@/utils/modes';
+import { BookIcon } from 'lucide-react';
 
 // shared configuration
 export const baseOptions: HomeLayoutProps = {
@@ -15,6 +16,14 @@ export const baseOptions: HomeLayoutProps = {
     children: <NavChildren />,
   },
   githubUrl: 'https://github.com/ShukhratbekDev/nimau',
+  links: [
+    {
+      icon: <BookIcon />,
+      text: 'Blog',
+      url: '/blog',
+      active: 'nested-url',
+    },
+  ],
 };
 
 // docs layout configuration

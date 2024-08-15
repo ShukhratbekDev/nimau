@@ -1,0 +1,58 @@
+---
+title: Yangi Maqola Qanday Yaratish
+description: "Yangi maqola yaratish bo'yicha amaliy qo'llanma."
+authors:
+  - name: "Shukhratbek Mamadaliev"
+    telegram: "https://t.me/ShukhratbekDev"
+createdAt: 2024-08-15
+---
+
+# Yangi Maqola Yaratish Bo'yicha Qo'llanma
+
+Markdown (MDX) va Frontmatterdan foydalanib, yaxshi tashkil etilgan maqola yozuvi yaratish, loyihangizning qiymatini oshirishi mumkin. Agar siz ochiq manba loyihasiga hissa qo'shmoqchi bo'lsangiz yoki o'z hujjatlaringizni yaratayotgan bo'lsangiz, MDX va Frontmatterdan foydalanishni qanday amalga oshirishni tushunish, kontentingizning aniq va osongina foydalanilishini sezilarli darajada yaxshilaydi.
+
+## Kerakli Qadam: Matn Muharriringizni Ochish
+
+Loyihangizning tegishli katalogida yangi fayl yarating. Bu fayl nomi hujjatlashtirilayotgan tushuncha yoki atama asosida nomlangan bo'lishi kerak, masalan, `async-functions.mdx`.
+
+## Maqola Yozuvingizni Frontmatter Bilan Tuzing
+
+Frontmatter sizga MDX faylingizning boshlanishida hujjat haqida metadata qo'shishga imkon beradi. Bu metadata uch xil chiziq (`---`) bilan boshlanadi va tugatiladi. Quyidagilarni o'z ichiga olishi kerak:
+
+```yaml
+---
+title: "Asinxron Funktsiyalar"
+description: "JavaScriptda asinxron funksiyalarga qarash."
+authors:
+  - name: <Sizning Ismingiz>
+    telegram: <https://t.me/>
+createdAt: "YYYY-MM-DD"
+---
+```
+
+## Hujjat Matnini MDX Bilan Yozish
+[MDX](https://mdxjs.com), JSX sintaksisini qo'llab-quvvatlovchi Markdown kengaytmasi hisoblanadi, bu sizga Markdown ichida React komponentlaridan foydalanish imkonini beradi.
+
+Asosiy Struktura:
+
+```markdown
+# Sarlavha
+
+Kirish yoki tushunchaning umumiy ko'rinishi.
+
+## Qisqa Sarlavha: Batafsil Tushuntirish
+
+Tushunchani batafsilroq tushuntirish uchun misollar keltiring.
+```
+
+- Main headings uchun `#` dan, subheadings uchun `##` yoki `###` dan foydalaning.
+- Kod bloklari uchun uchta orqaga qaytish tugmachasini (```) ishlatib, syntax highlighting uchun dasturlash tilini ko'rsating.
+- Boshqa MDX elementlaridan foydalanish, masalan, `<Callout>` yoki `<MyCustomComponent />` kabi, sizning hujjatingizni yanada interaktiv va foydali qilishga yordam beradi.
+
+## Ko'rib Chiqish va Tugatish
+
+Maqola yozuvingizni tugallashdan oldin, uni aniqlik, tushunarli va mazmun jihatidan yaxshilab ko'rib chiqing. Misollar to'g'ri formatlangan va xatodan xoli ekanligiga ishonch hosil qiling.
+
+## Xulosa
+
+MDX va Frontmatterdan foydalanib yangi lug'at yozuvi yaratish - bu faqatgina tushuncha yoki terminni hujjatlashtirishdan ko'ra ko'proq; bu o'quv tajribasini yaratishdir. U juda jalb qiluvchi va ma'lumotli bo'lishi kerak. Sizning hissangiz yangi kelganda tushunishni osonlashtiradi va barcha o'quvchilar uchun chuqurroq tushunish imkoniyatini beradi.
