@@ -1,0 +1,41 @@
+---
+title: Express.js
+description: Node.js uchun eng mashhur va keng qo'llaniladigan web framework.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-11
+---
+
+**Express.js** (Express) — bu Node.js uchun eng mashhur va keng qo'llaniladigan web framework bo'lib, u web va mobil(API qismini) ilovalarni yaratishni soddalashtiradi.
+
+## Asosiy Afzalliklar
+
+- **Yengillik**: Soddalashtirilgan va intuitiv interfeys.
+- **Moslashuvchanlik**: HTML sahifalar, API-lar va boshqa ko'pgina funktsiyalarni yaratish imkoniyati.
+- **Keng qo'llab-quvvatlash**: Katta hamjamiyat va ko'plab plaginlar.
+
+## Foydalanish
+
+<Callout>
+  **Express.js** — Node.js uchun keng qo'llaniladigan web framework bo'lib, u web va mobil ilovalarni yaratishni
+  soddalashtiradi.
+</Callout>
+
+### Misol
+
+Bir oddiy Express.js serveri yaratish misoli:
+
+```js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
+```

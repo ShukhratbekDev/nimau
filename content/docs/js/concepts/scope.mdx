@@ -1,0 +1,44 @@
+---
+title: Scope
+description: JavaScriptda o'zgaruvchi va funksiyalarning mavjudligi va kirish imkoniyati doirasi.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**Scope** (Doira) — bu JavaScriptda o'zgaruvchi va funksiyalarning mavjudligi va kirish imkoniyati doirasini anglatadi. Scope kodning bir qismining boshqa qismidan kirish imkoniyatini nazorat qiladi.
+
+## Turlari
+
+- **Global Scope**: Barcha koddan kirish mumkin, ya'ni global doira.
+- **Function Scope**: Faqatgina funksiyaning ichidan kirish mumkin bo'lgan doira.
+- **Block Scope**: Block `{}` ichidan kirish mumkin bo'lgan doira, `let` va `const` yordamida e'lon qilingan o'zgaruvchilar block scope-ga ega.
+
+## Foydalanish
+
+<Callout>
+  **Scope** yordamida JavaScriptda o'zgaruvchi va funksiyalarning mavjudligi va kirish imkoniyati doirasi belgilanadi.
+  Har xil scope turlari global, funksional va block scope-ni o'z ichiga oladi.
+</Callout>
+
+### Misol
+
+Scope ni tushuntiruvchi oddiy misol:
+
+```js
+let globalVariable = 'Global';
+
+function scopeExample() {
+  let localVariable = 'Local';
+  console.log(globalVariable); // => Global
+  console.log(localVariable); // => Local
+}
+
+scopeExample();
+
+console.log(globalVariable); // => Global
+console.log(localVariable); // Error: localVariable is not defined
+```
+
+Bu misolda `globalVariable` global scope-ga ega, `localVariable` esa funksional scope-ga ega va funktsiya tashqarisidan kirish imkoniyati yo'q.

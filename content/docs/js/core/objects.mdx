@@ -1,0 +1,43 @@
+---
+title: Objects
+description: JavaScriptda malumotlarni qayta ishlash uchun struktura.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**Objects** (Ob'ektlar) — bu JavaScriptda malumotlarni qayta ishlash uchun ishlatiladigan struktura bo'lib, ular xossalar(properties) va metodlardan iborat bo'lishi mumkin.
+
+## Asosiy Afzalliklar
+
+- **Struktura**: Malumotlarni tuzilgan struktura ko'rinishida saqlash imkoniyati.
+- **Xossalar(Properties) va metodlar**: Ob'ektlar xossalar(preoperties) va metodlarga ega bo'lishi mumkin.
+- **Moslashuvchanlik**: Turli turdagi malumotlarni bir ob'ekt ichida saqlash imkoniyati.
+
+## Foydalanish
+
+<Callout>
+  **Objects** JavaScriptda malumotlarni qayta ishlash uchun struktura bo'lib, xossalar(properties) va metodlardan iborat
+  bo'lishi mumkin.
+</Callout>
+
+### Misol
+
+Oddiy ob'ekt yaratish va unga kirish misoli:
+
+```js
+const person = {
+  name: 'NimaU',
+  age: 25,
+  greet: function () {
+    console.log('Salom, ' + this.name);
+  },
+};
+
+console.log(person.name); // => NimaU
+console.log(person.age); // => 25
+person.greet(); // => Salom, NimaU
+```
+
+Bu misolda `person` ob'ekti `name`, `age` xossalar(properties)ga va `greet` metodga ega.

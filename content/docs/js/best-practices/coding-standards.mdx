@@ -1,0 +1,90 @@
+---
+title: Coding Standards
+description: JavaScript kodini yozishda eng yaxshi amaliyotlar va standartlar.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+## Umumiy ko'rinish
+
+**Coding Standards** (Kodlarni yozish standartlari) — bu JavaScript kodini yozishda eng yaxshi amaliyotlar va standartlar bo'lib, ular kodni o'qilishi, qayta ishlatilishi va saqlanishini yaxshilaydi.
+
+## Asosiy Afzalliklar
+
+- **O'qilishi oson kod**: Kodingizni boshqalar tomonidan o'qilishi va tushunilishi osonlashtiradi.
+- **Barqarorlik**: Kodning bir xil uslubda yozilishini ta'minlaydi.
+- **Uzluksiz qo'llab-quvvatlash**: Kodingizni kengaytirish va saqlashni qulayroq qiladi.
+
+## Foydalanish
+
+<Callout>
+  **Coding Standards** yordamida JavaScript kodingizni yaxshi amaliyotlar va standartlarga rioya qilib yozish mumkin. Bu
+  usullar kodni o'qilishi, qayta ishlatilishi va saqlanishini yaxshilaydi.
+</Callout>
+
+### Misol
+
+Kodlarni yozish standartlarining bir nechta usullari misoli:
+
+```js
+// O'zgarmas qiymatlar uchun 'const' va o'zgaruvchilar uchun 'let' ni ishlatish
+const MAX_SIZE = 100;
+let count = 42;
+
+// Aniq va qisqa o'zgaruvchining nomlarini tanlash
+let userAge = 30;
+
+// Funksiyalarni aniq va qisqa nomlash
+function calculateTotal(price, tax) {
+  return price + tax;
+}
+
+// Tabular (4 probel) ishlatish
+if (userAge > 18) {
+  console.log('User is an adult');
+}
+```
+
+## Linters va Formatters ishlatish
+
+1. ESLint:
+   - ESLint konfiguratsiya faylini yaratish:
+   ```bash
+   npm install eslint --save-dev
+   npx eslint --init
+   ```
+   - ESLint ni ishlatish:
+   ```bash
+   npx eslint yourfile.js
+   ```
+2. Prettier:
+   - Prettier ni o'rnatish:
+   ```bash
+   npm install --save-dev --save-exact prettier
+   echo {}> .prettierrc.json
+   ```
+   - Prettier ni ishlatish:
+   ```bash
+   npx prettier --write yourfile.js
+   ```
+3. Git Hooks orqali avtomatlashtirish: - Husky va lint-staged o'rnatish:
+   `bash
+npx mrm lint-staged
+` - Husky va lint-staged ni konfiguratsiya qilish:
+   `bash
+// package.json
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged": {
+  "*.js": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}
+`
+   Bu usullar kodni yozishda standartlarga rioya qilish va kodning sifati va barqarorligini ta'minlashga yordam beradi.

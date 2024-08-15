@@ -1,0 +1,39 @@
+---
+title: Error Handling
+description: JavaScript kodlarida xatolarni boshqarish usullari.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**Error Handling** (Xatolarni boshqarish) — bu JavaScript kodlarida xatolarni boshqarish va ularni to'g'ri ko'rsatish usullari.
+
+## Asosiy Afzalliklar
+
+- **Barqarorlik**: Xatolarni to'g'ri boshqarish ilovaning barqarorligini ta'minlaydi.
+- **Foydalanuvchi tajribasi**: Xatolar to'g'ri ko'rsatilishi foydalanuvchi tajribasini yaxshilaydi.
+- **Diagnostic**: Xatolarni aniqlash va ularni bartaraf etish imkonini beradi.
+
+## Foydalanish
+
+<Callout>
+  **Error Handling** yordamida JavaScript kodlarida xatolarni boshqarish va ularni to'g'ri ko'rsatish uchun muhim
+  usullarni taqdim etadi.
+</Callout>
+
+### Misol
+
+Oddiy xato boshqarish misoli:
+
+```js
+try {
+  let result = riskyOperation();
+} catch (error) {
+  console.error('Xato aniqlandi:', error);
+} finally {
+  console.log('Xato boshqarish jarayoni tugadi.');
+}
+```
+
+Bu misolda, `try` blokidagi kodda xato yuz bersa, `catch` bloki ishlaydi va xatoni konsolga chiqaradi. `finally` bloki esa har doim ishlaydi.

@@ -1,0 +1,68 @@
+---
+title: Debugging
+description: JavaScript kodida xatolarni topish, aniqlash va tuzatish jarayoni.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**Debugging** (Xatolarni tuzatish) — bu JavaScript kodida xatolarni topish, aniqlash va tuzatish jarayonidir.
+
+## Asosiy Afzalliklar
+
+- **Xatolarni aniqlash**: Koddagi xatolarni tezda aniqlash imkoniyatini beradi.
+- **Jarayonni kuzatish**: Dasturda qaysi kod qismlari bajarilayotganini kuzatish imkoniyatini beradi.
+- **Tuzatish**: Aniqlangan xatolarni tuzatish va qayta sinab ko'rish imkoniyati.
+
+## Foydalanish
+
+<Callout>
+  **Debugging** yordamida JavaScript kodidagi xatolarni topish, aniqlash va tuzatish mumkin. Debug vositalari yordamida
+  kodning ishlash jarayonini kuzatish va analitik qilish oson.
+</Callout>
+
+### Misol
+
+Console yordamida xatolarni aniqlash uchun debugging misoli:
+
+```js
+function add(a, b) {
+  console.log(`Adding ${a} and ${b}`);
+  return a + b;
+}
+
+let result = add(5, 10);
+console.log(`Result is ${result}`);
+```
+
+Bu misolda console.log funksiyasidan foydalanib, add funksiyasi ishlayotganda qaysi matnlarni va malumotlarni chop etishni kuzatishingiz mumkin.
+
+## Chrome DevTools orqali debugging
+
+1. Chrome DevTools:
+   - Chrome brauzerida sahifani oching.
+   - F12 tugmachasini bosing yoki inspeksiya qilish uchun o'ng tugmani bosing va "Inspect"ni tanlang.
+   - "Sources" bo'limiga o'ting.
+   - Siz qaysi kod qismini to'xtatmoqchisiz, unda break point o'rnating.
+   - Brauzerni yangilang va kodni qadam-qadam kuzatib boring.
+
+## VSCode orqali debugging
+
+1. Visual Studio Code yordamida debugging:
+   - launch.json faylini yaratish:
+   ```json
+   {
+     "version": "0.2.0",
+     "configurations": [
+       {
+         "type": "node",
+         "request": "launch",
+         "name": "Launch Program",
+         "program": "${workspaceFolder}/app.js",
+         "skipFiles": ["<node_internals>/**"]
+       }
+     ]
+   }
+   ```
+   - VSCode-ning debug menyusidan "Start Debugging" tugmachasini bosib debugging jarayonini boshlang.

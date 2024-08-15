@@ -1,30 +1,37 @@
 import '@/app/global.css';
-import { I18nProvider } from 'fumadocs-ui/i18n';
-import { RootProvider } from 'fumadocs-ui/provider';
-import { Inter } from 'next/font/google';
-import type { ReactNode } from 'react';
+// eslint-disable-next-line import-x/no-unresolved
+import { GeistMono } from 'geist/font/mono';
+// eslint-disable-next-line import-x/no-unresolved
+import { GeistSans } from 'geist/font/sans';
+import type { Viewport } from 'next';
 
-const inter = Inter({
-  subsets: ['latin'],
+import { Body } from '@/app/layout.client';
+import { baseUrl, createMetadata } from '@/utils/metadata';
+
+import { Provider } from './provider';
+
+export const metadata = createMetadata({
+  title: {
+    template: '%s | NimaU',
+    default: 'NimaU',
+  },
+  description: "bu ochiq kodli loyihadir, IT tushunchalarini o'zbek tilida o'rganing.",
+  metadataBase: baseUrl,
 });
 
-export default function Layout({ children }: { children: ReactNode }) {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#0A0A0A' },
+    { media: '(prefers-color-scheme: light)', color: '#fff' },
+  ],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }): React.ReactElement {
   return (
-    <html lang="uz" className={inter.className} suppressHydrationWarning>
-      <body>
-        <I18nProvider
-          locale="uz"
-          translations={
-            {
-              uz: {
-                search: 'qidirish',
-              },
-            }.uz
-          }
-        >
-          <RootProvider>{children}</RootProvider>
-        </I18nProvider>
-      </body>
+    <html lang="uz" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+      <Body>
+        <Provider>{children}</Provider>
+      </Body>
     </html>
   );
 }

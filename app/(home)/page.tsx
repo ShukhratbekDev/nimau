@@ -1,8 +1,10 @@
 import flatMap from 'lodash/flatMap';
+import { ChevronRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
-import { getPages } from '@/app/source';
+import { NimaUIcon } from '@/app/layout.client';
+import { docs } from '@/app/source';
 import TextAnimation from '@/components/TextAnimation';
 
 export default function HomePage() {
@@ -18,7 +20,7 @@ export default function HomePage() {
   <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
 </svg>`;
 
-  const pages = getPages();
+  const pages = docs.getPages();
   const titles: string[] = pages.map((page) => page.data.title);
   const pageTitles: Array<string | number> = flatMap<string, string | number>(titles, (value, index, array) => {
     const isNotLastItem = index < array.length - 1;
@@ -38,8 +40,9 @@ export default function HomePage() {
           ].join(', '),
         }}
       >
-        <h1 className="mb-4 border-b-4 border-fd-foreground pb-2 text-4xl font-bold md:text-5xl">
-          Nima U -
+        <h1 className="mb-4 border-b-4 border-fd-foreground pb-2 text-4xl md:text-5xl">
+          <NimaUIcon className="inline text-lg size-40" fill="currentColor" />
+          <ChevronRightIcon className="inline" />
           <TextAnimation data={pageTitles} />?
         </h1>
         <p className="text-sm md:text-base">bu ochiq kodli loyihadir, IT tushunchalarini o'zbek tilida o'rganing.</p>

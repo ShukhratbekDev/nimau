@@ -1,0 +1,43 @@
+---
+title: async/await
+description: JavaScriptda asinxron kodlarni sinxron usulda yozish imkonini beruvchi usullardir.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**async/await** — bu JavaScriptda asinxron kodlarni sinxron usulda yozish imkonini beruvchi usullardir. `async` kalit so'zi funksiyani asinxron qiladi, `await` esa promise natijasini kutadi.
+
+## Asosiy Afzalliklar
+
+- **Kodning o'qilishi**: Kodni sinxron usulda yozish va o'qishni osonlashtiradi.
+- **Xatolarni qayta ishlash**: Asinxron xatolarni boshqarish uchun osonroq yechim.
+- **Moslashuvchanlik**: Asinxron operatsiyalarni ketma-ketlikda oson boshqarish imkoniyati beradi.
+
+## Foydalanish
+
+<Callout>
+  **async/await** yordamida JavaScriptda asinxron kodlarni sinxron usulda yozish mumkin bo'ladi, bu esa kodni o'qishni
+  va tushunishni osonlashtiradi.
+</Callout>
+
+### Misol
+
+async/await yordamida asinxron funksiyalarni yaratish misoli:
+
+```js
+async function fetchUserData() {
+  try {
+    let response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log('Xato yuz berdi:', error);
+  }
+}
+
+fetchUserData();
+```
+
+Bu misolda `fetchUserData` asinxron funktsiyasi `await` yordamida promise natijasini kutadi va natijani konsolga chiqaradi.

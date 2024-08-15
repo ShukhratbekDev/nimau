@@ -1,0 +1,44 @@
+---
+title: Closures
+description: JavaScriptda ichki funksiyalarning tashqi funksiyalar doirasidan foydalanishi.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**Closures** (Yopilishlar) — bu JavaScriptda ichki funksiyalarning tashqi funksiyalar doirasidan foydalanishi.
+
+## Asosiy Afzalliklar
+
+- **Xotira**: Dasturda xotiradan samarali foydalanish.
+- **Qatlam**: Funksiyalar orasidagi bog'liqlikni saqlash.
+- **Yashirinlik**: Ma'lumotlarni yashirin holatda saqlash imkoniyati.
+
+## Foydalanish
+
+<Callout>
+  **Closures** o'zgaruvchilar va funksiyalarning to'g'ri izolyatsiyasini ta'minlaydi, bu esa kodning ishonchliligini va
+  xavfsizligini oshiradi. JavaScriptda closuresni yaratish uchun funksiyalar va qidiruv doiralari (scope) ishlatiladi.
+</Callout>
+
+### Misol
+
+Oddiy closure yaratish misoli:
+
+```js
+function outerFunction() {
+  let outerVariable = 'Men tashqaridaman!';
+
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+
+  return innerFunction;
+}
+
+const closure = outerFunction();
+closure(); // => Men tashqaridaman!
+```
+
+Bu misolda, `innerFunction` `outerVariable` o'zgaruvchisiga kirish imkoniyatiga ega, bu esa closure deb ataladi.

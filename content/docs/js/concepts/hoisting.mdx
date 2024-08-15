@@ -1,0 +1,41 @@
+---
+title: Hoisting
+description: JavaScriptda o'zgaruvchi va funksiyalarni qabul qilish va yuklash mexanizmi.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**Hoisting** (Ko'tarilish) — JavaScriptda funktsiyalar va o'zgaruvchilarni e'lon qilishni kodning yuqori qismiga ko'tarilish hodisasi. Bu degani, funksiya yoki o'zgaruvchini chaqirish, ularning qaysi joyda e'lon qilinganligidan qat'i nazar, mumkin bo'ladi.
+
+## O'zgaruvchilar Hoistingi
+
+JavaScriptda o'zgaruvchilar `var`, `let`, yoki `const` kalit so'zlari bilan e'lon qilinishi mumkin. Lekin `var` kalit so'zi bilan e'lon qilingan o'zgaruvchilar `hoisting` natijasida ularning qiymatlari `undefined` bo'lib qoladi, chunki faqat e'lon qilinadi, lekin qiymati tayinlanmaydi.
+
+## Asosiy Afzalliklar
+
+- **Flexibility**: O'zgaruvchilar va funksiyalarni dastur boshida ishlatish imkoniyati.
+- **Kod o'qish**: Kodni o'qish va tushunishni osonlashtirish.
+- **Funksional bo'laklar**: Funktsiyalarni alohida bo'laklarga ajratish.
+
+## Foydalanish
+
+<Callout>**Hoisting** yordamida JavaScriptda o'zgaruvchi va funksiyalarni dastur boshida ishlatish mumkin.</Callout>
+
+### Misol
+
+Hoisting mexanizmi misoli:
+
+```js
+console.log(myVar); // => undefined
+var myVar = 'Salom, NimaU!';
+
+myFunction();
+
+function myFunction() {
+  console.log('Bu hoisting yordamida ishlayapti!');
+}
+```
+
+Bu misolda, `myVar` va `myFunction` hoisting tufayli kiritilmasdan oldin ham ishlaydi.

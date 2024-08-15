@@ -1,0 +1,43 @@
+---
+title: Context
+description: JavaScriptda funksiyaning chiqarilish va bajarilish vaqtida uni ataladigan obyekt yoki halqaroq doira.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**Context** (Kontekst) — bu JavaScriptda funksiyaning chiqarilish va bajarilish vaqtida uni ataladigan obyekt yoki doira(scope)ni anglatadi. `this` kalit so'zi yordamida kontekst aniq bir obyektga ishora qiladi.
+
+## Asosiy Afzalliklar
+
+- **Dinamik kontekst**: `this` kalit so'zi bajarilish vaqtida aniq obyektga ishora qiladi.
+- **Oson foydalanish**: Obyektlar ichidagi xossalar va metodlarga kirish imkoniyati.
+- **Kadrlar**: Funksiyalar orasida kontekstni boshqarish imkoniyati.
+
+## Foydalanish
+
+<Callout>
+  **Context** JavaScriptda funksiyaning bajarilish vaqtida undan foydalanilgan obyektni anglatadi. `this` kalit so'zi
+  yordamida kontekstdan foydalaniladi.
+</Callout>
+
+### Misol
+
+Context ni tushuntiruvchi oddiy misol:
+
+```js
+const person = {
+  name: 'NimaU',
+  greet: function () {
+    console.log('Salom, ' + this.name);
+  },
+};
+
+person.greet(); // => Salom, NimaU
+
+const greet = person.greet;
+greet(); // => Salom, undefined (this is the global object or undefined in strict mode)
+```
+
+Bu misolda `person.greet` `person` ob'ekti kontekstida ishlaydi va `this` `person` ob'ektiga ishora qiladi. `greet` chaqirilganda esa `this` global obyektga (yoki `undefined`) ishora qiladi.

@@ -1,0 +1,36 @@
+---
+title: Event Loop
+description: Node.js-ning asinxron ishlash modelini boshqaruvchi mexanizm.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-11
+---
+
+**Event Loop** (Voqealar aylanishi) — bu Node.js-ning asinxron ishlash modelini boshqaruvchi mexanizm bo'lib, I/O operatsiyalarini bloklamasdan amalga oshirish imkoniyatini beradi.
+
+## Asosiy Afzalliklar
+
+- **Asinxron ishlash**: I/O operatsiyalarni bloklamagan holda amalga oshiradi.
+- **Yuqori samaradorlik**: Resurslardan optimal foydalanish.
+- **Moslashuvchanlik**: Ko'p sonli so'rovlarni samarali boshqarish.
+
+## Foydalanish
+
+<Callout>
+  **Event Loop** — Node.js-ning yadro komponentlaridan biri bo'lib, uning asinxron ishlash modelini boshqaradi.
+</Callout>
+
+### Misol
+
+Bir oddiy event loop misoli:
+
+```js
+console.log('Start');
+
+setTimeout(() => {
+  console.log('Asynchronous operation');
+}, 0);
+
+console.log('End');
+```

@@ -1,0 +1,40 @@
+---
+title: this
+description: JavaScriptda kontekstdan tashqari qo'llaniladigan kalit so'z.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2024-08-14
+---
+
+**this** — bu JavaScriptda kontekstdan tashqari qo'llaniladigan kalit so'z bo'lib, u funksiyaning chiqarilish konteksti (scope) ga ishora qiladi.
+
+## Asosiy Afzalliklar
+
+- **Dinamik kontekst**: `this` funksiyaning chiqarilish kontekstiga qarab o'zgaradi.
+- **Moslashuvchanlik**: Obyektlar ichida xossalar(properties)ga kirish imkoniyatini beradi.
+- **Kodning tushunilishi**: Kodning qismlarini birlashgan holda tushunishni osonlashtiradi.
+
+## Foydalanish
+
+<Callout>
+  **this** kalit so'zi yordamida JavaScriptda funksiyaning konteksti o'zgaradi va bu orqali ob'ektlar ichidagi
+  xossalarga kirish mumkin bo'ladi.
+</Callout>
+
+### Misol
+
+this kalit so'zini ishlatish misoli:
+
+```js
+const person = {
+  name: 'NimaU',
+  greet: function () {
+    console.log('Salom, mening ismim ' + this.name);
+  },
+};
+
+person.greet(); // => Salom, mening ismim NimaU
+```
+
+Bu misolda `this` kalit so'zi `greet` funksiyasi ichida `person` ob'ektining `name` xossasiga ishora qiladi.

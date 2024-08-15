@@ -1,0 +1,45 @@
+---
+title: Promises
+description: JavaScriptda asinxron operatsiyalarni boshqarish uchun va'da qilingan qiymatlar.
+authors:
+  - name: Shukhratbek Mamadaliev
+    telegram: https://t.me/ShukhratbekDev
+createdAt: 2023-10-02
+---
+
+**Promises** (Vada) — bu JavaScriptda asinxron operatsiyalarni boshqarish uchun va'da qilingan qiymatlar.
+
+## Asosiy Afzalliklar
+
+- **Asinxron boshqaruv**: Asinxron operatsiyalarni aniqlash va boshqarish imkoniyati.
+- **Xatolarni qayta ishlash**: Asinxron xatolarni boshqarish uchun oson yechim.
+- **Ketma-ketliklarni boshqarish**: `.then()` va `.catch()` methodlari orqali ketma-ketlikni boshqarish.
+
+## Foydalanish
+
+<Callout>
+  **Promises** yordamida JavaScriptda asinxron operatsiyalarni boshqarish va xatolarni qayta ishlash imkoniyatiga ega
+  bo'lasiz.
+</Callout>
+
+### Misol
+
+Oddiy promise yaratish va ishlatish misoli:
+
+```js
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('This is resolved');
+  }, 2000);
+});
+
+myPromise
+  .then((result) => {
+    console.log(result); // => This is resolved
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
+Bu misolda `promise` resolve orqali ikki soniyadan keyin bajarilishni ko'rsatadi va `then` yordamida natija ko'rsatiladi yoki `catch` yordamida xatolarni qayta ishlaydi.
