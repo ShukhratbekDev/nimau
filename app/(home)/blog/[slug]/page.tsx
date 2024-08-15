@@ -15,7 +15,9 @@ interface Param {
 export default function Page({ params }: { params: Param }): React.ReactElement {
   const page = blog.getPage([params.slug]);
 
-  if (!page) {notFound();}
+  if (!page) {
+    notFound();
+  }
 
   const lastUpdatedDate = page?.data?.updatedAt ?? page?.data?.createdAt;
   const formattedDate = lastUpdatedDate
@@ -70,7 +72,9 @@ export default function Page({ params }: { params: Param }): React.ReactElement 
 export function generateMetadata({ params }: { params: Param }): Metadata {
   const page = blog.getPage([params.slug]);
 
-  if (!page) {notFound();}
+  if (!page) {
+    notFound();
+  }
 
   return createMetadata({
     title: page.data.title,
