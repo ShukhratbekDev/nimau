@@ -1,8 +1,10 @@
-import Link from 'next/link';
-import { blog } from '@/app/source';
-import React from 'react';
 import { formatRelative } from 'date-fns';
 import { uz } from 'date-fns/locale';
+import Link from 'next/link';
+
+import React from 'react';
+
+import { blog } from '@/app/source';
 
 export default function Page(): React.ReactElement {
   const posts = [...blog.getPages()].sort(
